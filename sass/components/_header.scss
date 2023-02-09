@@ -1,5 +1,5 @@
 .header{
-    border: 1px solid #E7E9FC;
+    border-bottom: 1px solid #E7E9FC;
     position: relative;
 
     @media screen and (max-width: $tablet) {
@@ -23,6 +23,7 @@
     margin-right: 0;
     height: 80px;
     align-items: center;
+    letter-spacing: 0.03em;
 
     @media screen and (max-width: 767px) {
         height: auto;
@@ -39,7 +40,7 @@
     text-transform: uppercase;
     color: $hover-color;
     text-decoration: none;
-    margin-right: 91px;
+    margin-right: 76px;
     align-items: center;
 }
 
@@ -72,10 +73,7 @@
 .header-nav__list{
     display: flex;
     align-items: center;
-    
-    & .header-nav__item:not(:first-child) {
-        margin-left: 50px;
-    }
+    gap: 40px;
 
     @media screen and (max-width: 767px) {
         display: none;
@@ -87,15 +85,16 @@
 
     text-decoration: none;
     font-weight: 500;
-    font-size: 14px;
-    line-height: calc(16 / 14);
-    color: $text-color;
+    font-size: 16px;
+    line-height: calc(24 / 11);
+    color: #2E2F42;
+    letter-spacing: 0.02em;
 
     transition: color 250ms $cubic;
 
     &:hover,
     &:focus {
-        color: $hover-color;
+        color: $button-hover;
     }
 
     &::after {
@@ -109,7 +108,7 @@
         display: block;
 
         border-radius: 2px;
-        background-color: $hover-color;
+        background-color: $button-hover;
         transform: scale(0);
 
         transition: transform 250ms $cubic;
@@ -124,11 +123,11 @@
 .header-nav__active-link {
     position: relative;
 
-    color: $hover-color;
+    color: $button-hover;
     text-decoration: none;
     font-weight: 500;
-    font-size: 14px;
-    line-height: calc(16 / 14);
+    font-size: 16px;
+    line-height: calc(24 / 11);
 
     &::after {
         content: '';
@@ -141,7 +140,7 @@
         display: block;
 
         border-radius: 2px;
-        background-color: $hover-color;
+        background-color: $button-hover;
     }
 }
 
@@ -149,16 +148,22 @@
     margin-left: auto;
     align-items: center;
 
-    @media screen and (min-width: $desktop) {
+    @media screen and (max-width:767px) {
+        display: none;
+    }
+
+    @media screen and (min-width: $tablet) and (max-width: 1199px) {
         display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 4px;
     }
 
     @media screen and (min-width: $desktop) {
-        & .header-contacts__item:not(:first-child) {
-            margin-left: 50px;
+        display: flex;
+        gap: 40px;
         }
     }
-}
 
 
 
@@ -174,33 +179,21 @@
 }
 
 .header-contacts__link {
-        display: flex;
         align-items: center;
         font-weight: 500;
-        font-size: 14px;
-        line-height: calc(16 / 14);
-        color: $p-color;
+        font-size: 16px;
+        line-height: calc(24 / 16);
         text-decoration: none;
-        fill: $sgv-icon-color;
+        letter-spacing: 0.02em;
+        color: $team-job;
 
-        transition: color 250ms $cubic, fill 250ms $cubic;
+        transition: color 250ms $cubic;
     
         &:hover,
         &:focus {
-            color: $hover-color;
-            fill: $hover-color;
+            color: $button-hover;
         }
     }
-
-.header-contacts__icon-convert {
-    display: inline-block;
-    margin-right: 10px;
-}
-
-.header-contacts__icon-smartphone {
-    display: inline-block;
-    margin-right: 10px;
-}
 
 .header-mobile__box{
     @media screen and (min-width: $tablet) {

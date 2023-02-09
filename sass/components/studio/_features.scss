@@ -1,22 +1,22 @@
 .features__list {
     display: block;
-    margin-right: auto;
-    margin-left: auto;
-
-
 
     @media screen and (max-width: 767px) {
-        display: block;
+        display: flex;
+        flex-direction: column;
+        row-gap: 72px;
     }
 
-    @media screen and (min-width:768px) and (max-width: 1199px) {
+    @media screen and (min-width: $tablet) and (max-width: 1199px) {
         display: flex;
         flex-wrap: wrap;
-        margin: -12px;
+        gap: 72px 24px;
+        justify-content: center;
     }
 
     @media screen and (min-width: $desktop) {
         display: flex;
+        gap: 24px;
         & .features-list__item::before {
                 content: '';
                 height: 120px;
@@ -29,34 +29,16 @@
 }
 
 .features-list__item {
-    @media screen and (max-width: 480px) {
-        width: 100%;
+    @media screen and (max-width: 767px) {
+        max-width: 450px;
     }
 
-    @media screen and (min-width: $mobile) and (max-width: 767px) {
-        width: 450px;
-    }
-
-    @media screen and (min-width: $tablet) and (max-width: 1199px) {
-        & {
-            margin: 12px;
-            width: calc((100% - 2 * 24px) / 2);
-        }
-
-        &:not(:nth-child(3)), &:not(:nth-child(4)){
-            margin-bottom: 72px;
-        }
+    @media screen and (min-width: $tablet) and (max-width:1199px) {
+        width: 356px
     }
 
     @media screen and (min-width: $desktop) {
-        & {
-                margin: 12px;
-                width: calc((100% - 4 * 24px) / 4);
-        }
-    }
-
-    &:not(:last-child){
-        margin-bottom: 30px;
+        
     }
 }
 
@@ -84,7 +66,9 @@
 }
 
 .features__title {
-    margin-bottom: 10px;
+    margin-bottom: 8px;
+    color: $team-name;
+    letter-spacing: 0.02em;
 
     @media screen and (max-width: 767px) {
         font-weight: 700;

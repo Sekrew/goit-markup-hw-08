@@ -2,11 +2,9 @@
 
 
     @media screen and (max-width: $tablet) {
-        display: block;
-
-        .portfolio-table__item{
-            margin-bottom: 30px;
-        }
+        display: flex;
+        flex-direction: column;
+        gap: 48px;
     }
 
     @media screen and (min-width: $tablet) and (max-width: 1199px) {
@@ -27,7 +25,6 @@
 
 
 .portfolio-table__img {
-    margin-bottom: 20px;
 
     @media screen and (max-width: 767px) {
         width: 396px;
@@ -53,8 +50,7 @@
 
     &:hover,
     &:focus {
-        box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
-            1px 4px 6px rgba(0, 0, 0, 0.16);
+        box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
     }
 
     @media screen and (max-width: $tablet) {
@@ -109,23 +105,26 @@
 }
 
 .portfolio-table__text-box {
-    padding-left: $card-text-lrpad;
-    padding-right: $card-text-lrpad;
-    padding-bottom: $card-text-btpad;
-    padding-top: $card-text-btpad;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-bottom: 32px;
+    padding-top: 32px;
     border: 1px solid #eeeeee;
     border-top: none;
 }
 
 .portfolio-table__card-title {
-    font-weight: 700;
-    font-size: 18px;
-    line-height: calc(36 / 18);
-    margin-bottom: 4px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: calc(24 / 20);
+    margin-bottom: 8px;
+    color: $team-name;
+    letter-spacing: 0.02em;
 }
 
 .portfolio-table__card-text {
     font-size: 16px;
-    line-height: calc(30 / 16);
-    color: $p-color;
+    letter-spacing: 0.02em;
+    line-height: calc(24 / 16);
+    color: $team-job;
 }

@@ -10,11 +10,11 @@
 .speciality__title {
     font-weight: 700;
     font-size: 36px;
-    line-height: calc(42 / 36);
+    line-height: calc(40 / 36);
+    letter-spacing: 0.02em;
+    color: $team-name;
     text-align: center;
-    margin-right: auto;
-    margin-left: auto;
-    margin-bottom: 50px;
+    margin-bottom: 72px;
 }
 
 .speciality__list {
