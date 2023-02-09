@@ -97,11 +97,10 @@
     background-color: $hover-color;
     fill: $white-color;
 
-    transition: background-color 250ms $cubic, fill 250ms $cubic;
+    transition: background-color 250ms $cubic;
 
     &:hover,
     &:focus {
-        background-color: $white-color;
-        fill: $hover-color;
+        background-color: $button-hover;
     }
 }

@@ -86,7 +86,7 @@
     text-decoration: none;
     font-weight: 500;
     font-size: 16px;
-    line-height: calc(24 / 11);
+    line-height: 1.5;
     color: #2E2F42;
     letter-spacing: 0.02em;
 
@@ -192,6 +192,13 @@
         &:hover,
         &:focus {
             color: $button-hover;
+        }
+
+        @media screen and (min-width: $tablet) and (max-width: 1199px) {
+            font-weight: 400;
+            font-size: 12px;
+            letter-spacing: 0.04em;
+            line-height: 1.5;
         }
     }
 
