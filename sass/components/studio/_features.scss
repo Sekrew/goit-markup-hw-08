@@ -1,59 +1,121 @@
 .features__list {
-    display: flex;
+    display: block;
     margin-right: auto;
     margin-left: auto;
 
-    & .features-list__item::before{
-        content: '';
 
-        width: 270px;
-        height: 120px;
 
+    @media screen and (max-width: 767px) {
         display: block;
-        background-color: $button-bgc;
+    }
+
+    @media screen and (min-width:768px) and (max-width: 1199px) {
+        display: flex;
+        flex-wrap: wrap;
+        margin: -12px;
+    }
+
+    @media screen and (min-width: $desktop) {
+        display: flex;
+        & .features-list__item::before {
+                content: '';
+                height: 120px;
+        
+                display: block;
+                background-color: $button-bgc;
+                margin-bottom: 30px;
+            }
+    }
+}
+
+.features-list__item {
+    @media screen and (max-width: 480px) {
+        width: 100%;
+    }
+
+    @media screen and (min-width: $mobile) and (max-width: 767px) {
+        width: 450px;
+    }
+
+    @media screen and (min-width: $tablet) and (max-width: 1199px) {
+        & {
+            margin: 12px;
+            width: calc((100% - 2 * 24px) / 2);
+        }
+
+        &:not(:nth-child(3)), &:not(:nth-child(4)){
+            margin-bottom: 72px;
+        }
+    }
+
+    @media screen and (min-width: $desktop) {
+        & {
+                margin: 12px;
+                width: calc((100% - 4 * 24px) / 4);
+        }
+    }
+
+    &:not(:last-child){
         margin-bottom: 30px;
     }
-
-    & .features-list__item{
-        width: 270px;
-    }
-
-    & .features-list__item:not(:nth-child(4n)) {
-        margin-right: 30px;
-    }
 }
 
-.features__icon::before {
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-.plate::before {
-    background-image: url('../images/plate.svg');
-}
-
-.clock::before {
-    background-image: url('../images/clock.svg');
-}
-
-.computer::before {
-    background-image: url('../images/computer.svg');
-}
-
-.space::before {
-    background-image: url('../images/space.svg');
+@media screen and (min-width: $desktop) {
+    .features__icon::before {
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    
+        .plate::before {
+            background-image: url('../images/plate.svg');
+        }
+    
+        .clock::before {
+            background-image: url('../images/clock.svg');
+        }
+    
+        .computer::before {
+            background-image: url('../images/computer.svg');
+        }
+    
+        .space::before {
+            background-image: url('../images/space.svg');
+        }
 }
 
 .features__title {
-    font-weight: 700;
-    font-size: 14px;
-    line-height: calc(16 / 14);
-    text-transform: uppercase;
     margin-bottom: 10px;
+
+    @media screen and (max-width: 767px) {
+        font-weight: 700;
+        font-size: 36px;
+        line-height: calc(40 / 36);
+        text-align: center;
+    }
+
+    @media screen and (min-width: $tablet) and (max-width: 1199px) {
+        font-weight: 700;
+        font-size: 36px;
+        line-height: calc(40 / 36);
+    }
+    
+    @media screen and (min-width: $desktop) {
+        font-weight: 500;
+        font-size: 20px;
+        line-height: calc(24 / 20);
+    }
 }
 
-.features__text {
-    font-size: 14px;
-    line-height: calc(21 / 14);
-    color: $p-color;
+.features__text{
+    font-size: 16px;
+    line-height: calc(24 / 16);
+    color: $team-job;
+
+    @media screen and (max-width: 1199px) {
+        font-weight: 500;
+    }
+
+    @media screen and ($desktop) {
+        font-weight: 400;
+    }
 }

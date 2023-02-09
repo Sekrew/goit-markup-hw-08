@@ -4,36 +4,61 @@
     line-height: calc(42 / 36);
     margin-right: auto;
     margin-left: auto;
-    margin-bottom: 50px;
+    margin-bottom: 72px;
 }
 
 .clients__list {
     display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
 
-    & .clients-list__item{
-        width: calc((100% - 150px) / 6);
+    @media screen and (max-width: 767px) {
+        column-gap: 16px;
+        row-gap: 64px;
     }
 
-    & .clients-list__item:not(:last-child){
-        margin-right: 30px;
+    @media screen and (min-width: $tablet) and (max-width: 1199px) {
+        column-gap: 24px;
+        row-gap: 72px;
+    }
+
+    @media screen and (min-width: $desktop) {
+        column-gap: 24px;
+    }
+}
+
+.clients-list__item {
+    height: 88px;
+
+    @media screen and (max-width: 767px) {
+            width: 190px;
+    }
+
+    @media screen and (min-width: $tablet) and (max-width: 1199px) {
+        width: 168px;
+    }
+
+    @media screen and (min-width: $desktop) {
+        width: 168px;
     }
 }
 
 .clients__box {
-    height: 92px;
 }
 
 .clients__link {
+    height: 92px;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 92px;
     fill: $sgv-icon-color;
     border: 1px solid $sgv-icon-color;
     border-radius: 4px;
     transition: border-color 250ms $cubic, fill 250ms $cubic;
 
-    &:hover, &:focus{
+    &:hover,
+    &:focus {
         border-color: $hover-color;
         fill: $hover-color;
     }

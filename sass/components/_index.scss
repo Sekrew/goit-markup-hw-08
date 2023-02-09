@@ -1,0 +1,16 @@
+@import "./header";
+@import "./footer";
+@import "./studio/solution";
+@import "./studio/features";
+@import "./studio/speciality";
+@import "./studio/team";
+@import "./studio/clients";
+@import "./studio/modal";
+@import "./portfolio/buttons";
+@import "./portfolio/table";
+
+@media screen and (max-width: 767px) {
+    .speciality{
+        display: none;
+    }
+}

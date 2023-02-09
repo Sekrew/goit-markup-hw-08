@@ -1,5 +1,10 @@
 .speciality {
     padding-top: 0;
+    @media screen and (max-width: 1199px) {
+            & {
+                display: none;
+            }
+        }
 }
 
 .speciality__title {
@@ -15,31 +20,7 @@
 .speciality__list {
     display: flex;
 
-    & .speciality-list__item:not(:nth-child(3n)){
+    & .speciality-list__item:not(:nth-child(3n)) {
         margin-right: 30px;
     }
-}
-
-.speciality__card {
-    position: relative;
-}
-
-.speciality-card__text {
-    text-align: center;
-    background-color: rgba(47, 48, 58, 0.8);
-    padding-top: 27px;
-    padding-bottom: 27px;
-
-    position: absolute;
-    width: 100%;
-    top: 100%;
-    transform: translate(0, -100%);
-}
-
-.card-p {
-    font-weight: 700;
-    font-size: 14px;
-    line-height: calc(16 / 14);
-    color: $default-color;
-    text-transform: uppercase;
 }
