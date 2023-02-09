@@ -15,7 +15,7 @@
 
     @media screen and (max-width: 767px) {
         column-gap: 16px;
-        row-gap: 64px;
+        row-gap: 72px;
     }
 
     @media screen and (min-width: $tablet) and (max-width: 1199px) {
@@ -32,7 +32,7 @@
     height: 88px;
 
     @media screen and (max-width: 767px) {
-            width: 190px;
+            max-width: 190px;
     }
 
     @media screen and (min-width: $tablet) and (max-width: 1199px) {
