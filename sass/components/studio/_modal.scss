@@ -72,7 +72,9 @@
     top: 24px;
     right: 24px;
 
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: #E7E9FC;
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 50%;
@@ -200,7 +202,7 @@ textarea {
 
 .policy-container {
     display: flex;
-    justify-content: center;
+    align-items: center;
     margin-bottom: 24px;
 }
 
@@ -223,10 +225,12 @@ textarea {
 }
 
 .custom-checkbox {
-    border: 2px solid;
-    border-color: $text-color;
-    border-radius: 3px;
+    border: 1.25px solid;
+    border-color: #2E2F42;
+    border-radius: 2px;
     cursor: pointer;
+    width: 16px;
+    height: 16px;
 
     margin-right: 7px;
 
