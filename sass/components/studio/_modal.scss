@@ -98,6 +98,7 @@
     font-size: 16px;
     line-height: calc(24 / 16);
     text-align: center;
+    color: $team-name;
 }
 
 .form-label {
@@ -106,7 +107,6 @@
 
     display: block;
     width: 360px;
-    // height: 40px;
 
     &:focus-within .form-icons {
         fill: $hover-color;
@@ -122,7 +122,7 @@
     font-weight: 400;
     font-size: 12px;
     line-height: calc(16 / 12);
-    color: $p-color;
+    color: #8E8F99;
 }
 
 .form-icons {
@@ -225,7 +225,7 @@ textarea {
 .custom-checkbox {
     border: 2px solid;
     border-color: $text-color;
-    border-radius: 4px;
+    border-radius: 3px;
     cursor: pointer;
 
     margin-right: 7px;
@@ -234,13 +234,14 @@ textarea {
 }
 
 .policy-text {
-    font-size: 14px;
-    line-height: calc(24 / 14);
+    font-size: 12px;
+    line-height: calc(16 / 12);
     color: $p-color;
 }
 
 .policy-link {
     color: $hover-color;
+    text-decoration: underline;
 }
 
 .submit-div {
