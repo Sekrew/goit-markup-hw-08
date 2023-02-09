@@ -371,6 +371,13 @@ a {
     margin-right: auto;
   }
 }
+@media screen and (min-width: 1200px) {
+  .foot-helper__container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
 
 .footer {
   background-color: #2E2F42;
@@ -1309,7 +1316,6 @@ a {
   margin-bottom: 26px;
   display: block;
   width: 360px;
-  height: 40px;
 }
 .form-label:focus-within .form-icons {
   fill: #4D5AE5;
