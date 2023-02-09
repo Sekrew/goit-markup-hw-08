@@ -31,10 +31,10 @@
 }
 
 .header-nav__main{
-    font-family: Raleway, sans-serif;
+    font-family: 'Raleway';
     font-weight: 800;
     font-size: 18px;
-    line-height: calc(21/18);
+    line-height: calc(24/18);
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: $hover-color;
@@ -49,43 +49,6 @@
     text-transform: uppercase;
 }
 
-.js-close-menu{
-    display: none;
-}
-
-.js-open-menu{
-    display: block;
-}
-
-.header-mobile-social__list{
-    @media screen and (min-width: 767px) {
-        display: none;
-    }
-
-    .header-mobile-social__item:not(:first-child)::before{
-        content: "";
-
-        width: 22px;
-        height: 0px;
-
-        border: 1px solid rgba(33, 33, 33, 0.2);
-        transform: rotate(90deg);
-        margin-right: 10px;
-
-    }
-
-    .header-mobile-social__item{
-    margin-right: 10px;
-    }
-
-    .header-mobile-social__text{
-        color: $hover-color;
-        font-weight: 500;
-        font-size: 18px;
-        line-height: calc(22 / 16);
-    }
-}
-
 .header-nav__box{
 
     @media screen and (max-width: 767px) {
@@ -96,6 +59,9 @@
                 & .header-mobile-social__list {
                     display: none;
                 }
+
+                display: flex;
+                align-items: center;
     }
     @media screen and (min-width: $tablet) {
         display: flex;

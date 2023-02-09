@@ -1,0 +1,162 @@
+.js-menu-container{
+    width: 100vw;
+    height: 100vw;
+    position: fixed;
+    background-color: $white-color;
+    top: 0; 
+    z-index: 99;
+    padding-top: 80px;
+    padding-bottom: 40px;
+
+    @media screen and (min-width: $tablet) {
+        display: none;
+        .js-open-menu{
+            display: none;
+        }
+    }
+}
+
+.js-menu-container.is-hidden .js-open-menu{
+    display: none;
+}
+
+.js-menu-container .container{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: auto;
+}
+
+.menu-open__icon{
+    stroke: $team-name;
+}
+
+.js-open-menu{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    width: 32px;
+    height: 32px;
+    padding: 0;
+    border: 0;
+
+    @media screen and (min-width: $tablet) {
+        display: none;
+    }
+}
+
+.js-close-menu{
+    fill: $black;
+    height: 24px;
+    width: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #E7E9FC;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    transition: background-color 250ms $cubic, fill 250ms $cubic;
+
+    &:hover, &:focus{
+        background-color: $button-hover;
+        fill: $white-color;
+    }
+}
+
+.icon-close{
+    stroke: $black;
+}
+
+.mobile-nav__box{
+}
+
+.mobile-menu__nav{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.mobile-nav__active-link{
+    font-weight: 700;
+    font-size: 36px;
+    line-height: calc(40 / 36);
+    color: $button-hover;
+}
+
+.mobile-nav__link{
+    font-weight: 700;
+    font-size: 36px;
+    line-height: calc(40 / 36);
+    color: $team-name;
+}
+
+.bottom-menu{
+
+}
+
+
+
+.mobile__svg-list {
+    display: flex;
+    justify-content: center;
+
+    & .mobile-svg-list__item {
+        height: 40px;
+        width: 40px;
+    }
+}
+
+.mobile-contacts__box{
+    margin-bottom: 48px;
+}
+
+.mobile-contacts__list{
+    display: flex;
+    flex-direction: column;
+    column-gap: 40px;
+}
+
+.mobile-number__link{
+    font-weight: 600;
+    font-size: 36px;
+    line-height: calc(40 / 36);
+    color: $hover-color;
+}
+
+.mobile-mail__link{
+    font-weight: 500;
+    font-size: 20px;
+    line-height: calc(24 / 20);
+    color: $team-job;
+}
+
+.mobile__svg-list{
+    display: flex;
+    column-gap: 56px;
+}
+
+.mobile-svg__link {
+    height: 40px;
+    width: 40px;
+
+    display: flex;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    background-color: $hover-color;
+    fill: $white-color;
+
+    transition: background-color 250ms $cubic, fill 250ms $cubic;
+
+    &:hover,
+    &:focus {
+        background-color: $white-color;
+        fill: $hover-color;
+    }
+}
