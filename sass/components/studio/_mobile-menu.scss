@@ -1,6 +1,6 @@
 .js-menu-container{
     width: 100vw;
-    height: 100vw;
+    height: 100%;
     position: fixed;
     background-color: $white-color;
     top: 0; 
@@ -119,7 +119,7 @@
 .mobile-contacts__list{
     display: flex;
     flex-direction: column;
-    column-gap: 40px;
+    gap: 40px;
 }
 
 .mobile-number__link{

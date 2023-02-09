@@ -1682,7 +1682,7 @@ textarea {
 
 .js-menu-container {
   width: 100vw;
-  height: 100vw;
+  height: 100%;
   position: fixed;
   background-color: #ffffff;
   top: 0;
@@ -1825,9 +1825,7 @@ textarea {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-column-gap: 40px;
-     -moz-column-gap: 40px;
-          column-gap: 40px;
+  gap: 40px;
 }
 
 .mobile-number__link {
