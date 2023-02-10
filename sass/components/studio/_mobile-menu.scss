@@ -25,7 +25,6 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    overflow: auto;
 }
 
 .menu-open__icon{
@@ -86,7 +85,7 @@
     font-weight: 700;
     font-size: 36px;
     line-height: calc(40 / 36);
-    color: $button-hover;
+    color: $hover-color;
 }
 
 .mobile-nav__link{
@@ -140,6 +139,11 @@
     display: flex;
     justify-content: flex-start;
     column-gap: 56px;
+
+    @media screen and(max-width: 428px) {
+        column-gap: 0px;
+        justify-content: space-between;
+    }
 }
 
 .mobile-svg__link {
